@@ -74,7 +74,6 @@ function App() {
       <button type="button" className="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Save Segment
       </button>
-
       <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
@@ -90,7 +89,6 @@ function App() {
                   placeholder='Segment Name' name='segment'
                   value={segemntName} onChange={(e) => setSegemntName(e.target.value)} />
               </div>
-
               <div className="d-flex p-2 bd-highlight">
                 <div className="flex-fill bd-highlight">
                   <Select
@@ -106,10 +104,7 @@ function App() {
                 selectedOption !== null &&
                 input?.map((item, index) => (
                   <div className='d-flex p-2' key={index}>
-                    {
-                      console.log('item: ', item)
-                    }
-                    <div className="col-lg-10 card">
+                    <div className="col-lg-10 card p-1">
                       <div className="flex-fill bd-highlight">
                         <div className="d-flex bd-highlight">
                           <div className="flex-fill bd-highlight">
@@ -195,29 +190,28 @@ function App() {
                         </div>
                       </div>
                     </div>
-
                     <div className='col-lg-2'>
                       <div className="flex-fill bd-highlight">
-                        <button type="button" className="btn btn-outline-danger" onClick={() => handleRemove(index)}>Remove</button>
+                        <button type="button" className="btn btn-outline-danger"
+                          onClick={() => handleRemove(index)}>Remove</button>
                       </div>
                     </div>
                   </div>
                 ))
               }
-
-              <button type="button" className="btn btn-primary" onClick={handleAddSchema}>Add new schema</button>
-
+              <button type="button" className="btn btn-primary"
+                onClick={handleAddSchema}>Add new schema</button>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary" onClick={handleSaveData}>Save changes</button>
+              <button type="button" className="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary"
+                onClick={handleSaveData}>Save changes</button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
   );
 }
 
